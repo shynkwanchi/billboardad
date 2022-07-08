@@ -19,7 +19,7 @@ Last updated: To be added.
 + Nguyen Quang Duy - s3877991.
 + Ninh Trong Hoang - s3695412.
 + Lu Minh Khang - s3863969.
-+ Dong Vu Minh Phuc -s3700622.
++ Dong Vu Minh Phuc - s3700622.
 ### 2) Contributions
 + Thien Di (--%):
 + Quang Duy (--%):
