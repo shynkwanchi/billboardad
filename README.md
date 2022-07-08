@@ -15,30 +15,17 @@ Last updated: To be added.
 
 ## Project Group 1: MERN Noobs.
 ### 1) Members
-Doan Thien Di - s3929677.
-
-Nguyen Quang Duy - s3877991.
-
-Ninh Trong Hoang - s3695412.
-
-Lu Minh Khang - s3863969.
-
-Dong Vu Minh Phuc -s3700622.
++ Doan Thien Di - s3929677.
++ Nguyen Quang Duy - s3877991.
++ Ninh Trong Hoang - s3695412.
++ Lu Minh Khang - s3863969.
++ Dong Vu Minh Phuc -s3700622.
 ### 2) Contributions
-Thien Di (--%):
-+ To be added
-
-Quang Duy (--%):
-+ To be added
-
-Trong Hoang (--%):
-+ To be added
-
-Minh Khang (--%):
-+ To be added
-
-Minh Phuc (--%):
-+ To be added
++ Thien Di (--%):
++ Quang Duy (--%):
++ Trong Hoang (--%):
++ Minh Khang (--%):
++ Minh Phuc (--%):
 
 ## Project Details
 ### 1) Description
