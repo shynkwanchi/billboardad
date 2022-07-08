@@ -31,24 +31,17 @@ Last updated: To be added.
 ### 1) Description
 To be added
 ### 2) Technology used
-Front-end:
-
-Back-end:
-
-Database:
-
-Hosting:
++ Front-end:
++ Back-end:
++ Database:
++ Hosting:
 ### 3) Functional requirements
 + To be added
 ### 4) Non-functional requirements
 + To be added
 ### 5) Links
-Github repository: https://github.com/shynkwanchi/billboardad
-
-UX/UI Design (Figma): To be added
-
-Report: To be added
-
-Demo video: To be added
-
-Deployment: To be added
++ Github repository: https://github.com/shynkwanchi/billboardad
++ UX/UI Design (Figma): To be added
++ Report: To be added
++ Demo video: To be added
++ Deployment: To be added
