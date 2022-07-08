@@ -15,7 +15,7 @@ Last updated: To be added.
 
 ## Project Group 1: MERN Noobs.
 ### 1) Members
-+ Doan Thien Di - s3929677.
++ Doan Thien Di - s3926977.
 + Nguyen Quang Duy - s3877991.
 + Ninh Trong Hoang - s3695412.
 + Lu Minh Khang - s3863969.
@@ -41,7 +41,7 @@ To be added
 + To be added
 ### 5) Links
 + Github repository: https://github.com/shynkwanchi/billboardad
-+ UX/UI Design (Figma): To be added
++ UX/UI Design (Figma): https://www.figma.com/file/OdJedCtoKoRmk7nkua6E90/BillBoarDad---A-billboard-booking-web-application?node-id=0%3A1
 + Report: To be added
 + Demo video: To be added
 + Deployment: To be added
