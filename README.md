@@ -21,20 +21,20 @@ Last updated: To be added.
 + Lu Minh Khang - s3863969.
 + Dong Vu Minh Phuc - s3700622.
 ### 2) Contributions
-+ Thien Di (--%):
-+ Quang Duy (--%):
-+ Trong Hoang (--%):
-+ Minh Khang (--%):
-+ Minh Phuc (--%):
++ Thien Di (--%): Full-stack developer.
++ Quang Duy (--%): UX/UI Designer, Full-stack developer.
++ Trong Hoang (--%): UX/UI Designer, Full-stack developer.
++ Minh Khang (--%): UX/UI Designer, Front-end developer.
++ Minh Phuc (--%): UX/UI Designer, Front-end developer
 
 ## Project Details
 ### 1) Description
 To be added
 ### 2) Technology used
-+ Front-end:
-+ Back-end:
-+ Database:
-+ Hosting:
++ Front-end: ReactJS, Bootstrap
++ Back-end: Node.js, ExpressJS
++ Database: MongoDB
++ Hosting: To be added
 ### 3) Functional requirements
 + To be added
 ### 4) Non-functional requirements
@@ -42,6 +42,6 @@ To be added
 ### 5) Links
 + Github repository: https://github.com/shynkwanchi/billboardad
 + UX/UI Design (Figma): https://www.figma.com/file/OdJedCtoKoRmk7nkua6E90/BillBoarDad---A-billboard-booking-web-application?node-id=0%3A1
-+ Report: To be added
++ Techical report: https://docs.google.com/document/d/1UtM308DMx_Kf3Nah_dX5ROpqE5GgzwRKs2pJHOv8DQY/edit?usp=sharing
 + Demo video: To be added
 + Deployment: To be added
