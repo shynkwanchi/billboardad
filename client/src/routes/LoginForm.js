@@ -1,6 +1,7 @@
 import React, { Component, useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import LogStyle from "../components/LoginForm.module.css";
+import axios from "axios";
 
 function LoginForm() {
   const initialValues = { email: "", password: "" };
@@ -14,9 +15,20 @@ function LoginForm() {
     setIsSubmit(true);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setFormErrors(validate(formValues));
+    try {
+      const url = "http://localhost:5000/api/auth";
+      const { data: res } = await axios.post(url, formValues);
+      localStorage.setItem("token", res.data);
+      window.location = "/"
+      console.log(res.message);
+    } catch(error) {
+        if (error.response && error.response.status >= 400 && error.response.status <= 500) {
+          
+        }
+    }
   };
 
   useEffect(() => {

@@ -4,14 +4,18 @@ import Home from "./routes/Home";
 import Navigation from "./components/Navigation";
 import LoginForm from "./routes/LoginForm";
 import SignupForm from "./routes/SignupForm";
+import Main from "./components/Main";
 
 function App() {
+
+  const user = localStorage.getItem("token");
 
   return (
     <div>
       <Navigation />
       <Routes>
         <Route path="/" element={<Home />} />
+        {user && <Route path="/" exact element= {<Main />}/>}
         <Route path="/login" element={<LoginForm />} />
         <Route path="/signup" element={<SignupForm />} />
       </Routes>

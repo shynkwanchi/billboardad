@@ -1,6 +1,7 @@
 import React, { Component, useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import LogStyle from "../components/LoginForm.module.css";
+import axios from "axios";
 
 function SignupForm() {
   const initialValues = { email: "", password: "", retypepass: "", phone: "" };
@@ -14,9 +15,21 @@ function SignupForm() {
     setIsSubmit(true);
   };
 
-  const handleSubmit = (e) => {
+  const navigate = useNavigate();
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setFormErrors(validate(formValues));
+    try {
+      const url = "http://localhost:5000/api/users";
+      const { data: res } = await axios.post(url, formValues);
+      navigate("/login");
+      console.log(res.message);
+    } catch(error) {
+        if (error.response && error.response.status >= 400 && error.response.status <= 500) {
+          
+        }
+    }
   };
 
   useEffect(() => {
