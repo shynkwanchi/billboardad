@@ -1,10 +1,10 @@
 import './App.css';
-import Slider from './component/Slider';
+import darktable from './component/DetailPage/Table';
+import Table from 'react-bootstrap/esm/Table';
+import { ReactDOM } from 'react';
 
 function App() {
-  return (
-    <Slider />
-  );
+  return;
 }
 
 export default App;
