@@ -28,6 +28,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "build": "react-scripts build",
     "client": "react-scripts start",
     "dev": "concurrently \"npm run server\" \"npm run client\""
   },

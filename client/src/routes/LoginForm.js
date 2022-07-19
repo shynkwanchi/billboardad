@@ -1,61 +1,33 @@
-import React, { Component, useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import LogStyle from "../components/LoginForm.module.css";
 import axios from "axios";
 
 function LoginForm() {
-  const initialValues = { email: "", password: "" };
-  const [formValues, setFormValues] = useState(initialValues);
-  const [formErrors, setFormErrors] = useState({});
-  const [isSubmit, setIsSubmit] = useState(false);
+  const [data, setData] = useState({ email: "", password: "" });
+  const [error, setError] = useState("");
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormValues({ ...formValues, [name]: value });
-    setIsSubmit(true);
+  const handleChange = ({ currentTarget: input }) => {
+    setData({ ...data, [input.name]: input.value });
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setFormErrors(validate(formValues));
     try {
       const url = "http://localhost:5000/api/auth";
-      const { data: res } = await axios.post(url, formValues);
+      const { data: res } = await axios.post(url, data);
       localStorage.setItem("token", res.data);
-      window.location = "/"
+      window.location = "/main";
       console.log(res.message);
-    } catch(error) {
-        if (error.response && error.response.status >= 400 && error.response.status <= 500) {
-          
-        }
-    }
-  };
-
-  useEffect(() => {
-    if (Object.keys(formErrors).length === 0 && isSubmit) {
-      console.log(formValues);
-    }
-  }, [formErrors]);
-
-  const validate = (values) => {
-    const errors = {};
-    const regex = /\S+@\S+\.\S+/;
-    if (!values.email) {
-      errors.email = "Email is required!";
-    } else if (!regex.test(values.email)) {
-      errors.email = "This is not a valid email format!";
-    }
-
-    if (!values.password) {
-      errors.password = "Password is required!";
-    }
-
-    return errors;
-  };
-
-  const displayErrors = (err) => {
-    if (err) {
-      return <div className={LogStyle.error}>{err}</div>;
+    } catch (error) {
+      if (
+        error.response &&
+        error.response.status >= 400 &&
+        error.response.status <= 500
+      ) {
+        setError(error.response.data.message);
+        console.log(error);
+      }
     }
   };
 
@@ -64,6 +36,7 @@ function LoginForm() {
       <div className={LogStyle.form}>
         <form className="login" onSubmit={handleSubmit}>
           <h1 className={LogStyle.title}>Login</h1>
+          {error && <div className={LogStyle.error}>{error}</div>}
           <div className={LogStyle.input}>
             <label htmlFor="email">Email</label>
             <div>
@@ -71,11 +44,10 @@ function LoginForm() {
                 type="email"
                 name="email"
                 id="email"
-                value={formValues.email}
+                value={data.email}
                 onChange={handleChange}
               />
             </div>
-            {displayErrors(formErrors.email)}
           </div>
           <div className={LogStyle.input}>
             <label htmlFor="password">Password</label>
@@ -84,11 +56,10 @@ function LoginForm() {
                 type="password"
                 name="password"
                 id="password"
-                value={formValues.password}
+                value={data.password}
                 onChange={handleChange}
               />
             </div>
-            {displayErrors(formErrors.password)}
           </div>
           <button
             className={LogStyle.btn}

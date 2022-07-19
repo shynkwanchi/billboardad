@@ -15,7 +15,7 @@ function App() {
       <Navigation />
       <Routes>
         <Route path="/" element={<Home />} />
-        {user && <Route path="/" exact element= {<Main />}/>}
+        {user && <Route path="/main" exact element= {<Main />}/>}
         <Route path="/login" element={<LoginForm />} />
         <Route path="/signup" element={<SignupForm />} />
       </Routes>
