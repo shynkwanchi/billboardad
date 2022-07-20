@@ -12,11 +12,8 @@ import "./slider.css";
 // import required modules
 import { Pagination, Navigation } from "swiper";
 
-import slider1 from "../../assets/slider1.jpg";
-import slider2 from "../../assets/slider2.jpg";
-import slider3 from "../../assets/slider3.jpg";
-
-const Slider = () => {
+// This component is used for home and detail page
+const Slider = props => {
     return (
         <>
             <Swiper
@@ -28,26 +25,17 @@ const Slider = () => {
                 }}
                 navigation={true}
                 modules={[Pagination, Navigation]}
-                className="mySwiper"
+                className="one-slide-swiper"
             >
-                <SwiperSlide>
-                    <img src={slider1} alt="slider" />
-                    <div className="slider-text">
-                        Your text here
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <img src={slider2} alt="slider" />
-                    <div className="slider-text">
-                        Your text here
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <img src={slider3} alt="slider" />
-                    <div className="slider-text">
-                        Your text here
-                    </div>
-                </SwiperSlide>
+                {props.slides.map(slide =>
+                    <SwiperSlide>
+                        <img src={slide.image} alt="slider" />
+                        <div className="slider-text">
+                            <h1>{slide.title}</h1>
+                            <p>{slide.subtitle}</p>
+                        </div>
+                    </SwiperSlide>
+                )}
             </Swiper>
         </>
     );

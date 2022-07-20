@@ -1,12 +1,36 @@
 import React from "react";
 import Card from "../../components/card/card";
 import Slider from "../../components/slider/silder";
+import { SwiperSlide } from "swiper/react";
 import "./home.css";
 
+// Import images
+import slider1 from "../../assets/slider1.jpg";
+import slider2 from "../../assets/slider2.jpg";
+import slider3 from "../../assets/slider3.jpg";
+
 const Home = () => {
+    const HomeSlides = [
+        {
+            image: slider1,
+            title: "Feature 1",
+            subtitle: "Feature 1 description."
+        },
+        {
+            image: slider2,
+            title: "Feature 2",
+            subtitle: "Feature 2 description."
+        },
+        {
+            image: slider2,
+            title: "Feature 3",
+            subtitle: "Feature 3 description."
+        },
+    ];
+
     return (
         <main>
-            <Slider />
+            <Slider slides={HomeSlides} />
             <div className="container">
                 <div className="row" id="filters">
                     <div className="col-12 col-sm-6 col-lg-3 filter-container">
