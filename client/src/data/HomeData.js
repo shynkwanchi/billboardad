@@ -4,7 +4,7 @@ import slider2 from "../assets/Second.jpg";
 import slider3 from "../assets/Third.jpg";
 
 // This is the slider data which is mostly used for home page.
-const SliderData = [
+const HomeData = [
     {
         image: slider1,
         title: "Feature 1",
@@ -22,4 +22,4 @@ const SliderData = [
     },
 ];
 
-export default SliderData;
+export default HomeData;
