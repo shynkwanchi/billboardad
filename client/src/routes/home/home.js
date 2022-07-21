@@ -1,6 +1,6 @@
 import React from "react";
 import Card from "../../components/card/card";
-import Slider from "../../components/slider/silder";
+import Slider from "../../components/slider/slider";
 import { SwiperSlide } from "swiper/react";
 import "./home.css";
 
