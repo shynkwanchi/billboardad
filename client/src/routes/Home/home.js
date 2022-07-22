@@ -1,7 +1,7 @@
 import React from "react";
 import Card from "../../components/Card/card";
 import Slider from "../../components/Slider/slider";
-import SliderData from "../../data/SliderData";
+import HomeData from "../../data/HomeData";
 import "./home.css";
 
 // This is the home page of the web application
@@ -9,7 +9,7 @@ const Home = () => {
     return (
         <main>
             {/* One slide slider that introduces the web application */}
-            <Slider slides={SliderData} />
+            <Slider slides={HomeData} />
 
             {/* The list of available billboards along with data filters */}
             <div className="container">
