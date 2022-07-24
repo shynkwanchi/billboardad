@@ -1,28 +1,29 @@
-import React, { useState } from 'react';
+import React from "react";
 import './Card.css';
-import ElonMusk from '../assets/ElonMusk.jpg';
+import { Card } from "react-bootstrap";
 
-function Card() {
+const ProfileCard = () => {
+  const cardDetail = [
+    {
+      image: "https://i.insider.com/50f967f56bb3f7830a000019",
+      title: "Lebron James",
+      text: "THE GOAT",
+    },
+];
 
-    const [name, setName] = useState ('Your Name');
-    const [job, setJob] = useState ('Job Name');
-    const [about, setAbout] = useState ('The quick, brown fox jumps over a lazy dog. DJs flock by when MTV ax quiz prog. Junk MTV quiz graced by fox whelps. Bawds jog, flick quartz, vex nymphs. Waltz, bad nymph, for quick jigs vex! Fox nymphs grab quick-jived waltz. Brick quiz whangs jumpy veldt fox.')
-    
+const renderCard = (card, index) => {
     return (
-        <div className='Card'>
-            <div className='upper-container'>
-                <div className='image-container'>
-                    <img src={require('../assets/ElonMusk.jpg')} alt='' height='100px' width='100px'/>             
-                </div>
-            </div>
-            <div className='lower-container'>
-                <h3> {name} </h3>
-                <h4> {job} </h4>
-                <p> {about} </p>
-                <button>View More</button>
-            </div>
-        </div>
-    )
+      <Card key={index} className="CardBox">
+        <Card.Img variant="top" src={card.image}/>
+        <Card.Body>
+          <Card.Title>{card.title}</Card.Title>
+          <Card.Text>{card.text}</Card.Text>
+        </Card.Body>
+      </Card>
+    );
+  };
+
+  return <div className="grid">{cardDetail.map(renderCard)}</div>;
 };
 
-export default Card
+export default ProfileCard;

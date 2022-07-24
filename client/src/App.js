@@ -1,10 +1,10 @@
 import './App.css';
-import { ReactDOM } from 'react';
-import Slider from './component/Slider/Slider.js'
+import Slider from './component/Slider/Slider'
+import ProfileCard from './component/Profile Card/Card'
 
 function App() {
   return(
-    <Slider/>
+    <ProfileCard/>
   );
 }
 
