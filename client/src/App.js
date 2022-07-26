@@ -13,9 +13,9 @@ function App() {
   return (
     <div>
       <Navigation />
+      <Home />
       <Routes>
-        <Route path="/" element={<Home />} />
-        {user && <Route path="/main" exact element= {<Main />}/>}
+        {user && <Route path="/" exact element= {<Main />}/>}
         <Route path="/login" element={<LoginForm />} />
         <Route path="/signup" element={<SignupForm />} />
       </Routes>

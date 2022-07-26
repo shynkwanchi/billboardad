@@ -17,7 +17,7 @@ function LoginForm() {
       const url = "http://localhost:5000/api/auth";
       const { data: res } = await axios.post(url, data);
       localStorage.setItem("token", res.data);
-      window.location = "/main";
+      window.location = "/";
       console.log(res.message);
     } catch (error) {
       if (
