@@ -1,5 +1,5 @@
 import React from "react";
-import './Card.css';
+import "./Card.css";
 import { Card } from "react-bootstrap";
 
 const ProfileCard = () => {
@@ -9,12 +9,12 @@ const ProfileCard = () => {
       title: "Lebron James",
       text: "THE GOAT",
     },
-];
+  ];
 
-const renderCard = (card, index) => {
+  const renderCard = (card, index) => {
     return (
-      <Card key={index} className="CardBox">
-        <Card.Img variant="top" src={card.image}/>
+      <Card style={{ width: "18rem" }} key={index} className="box">
+        <Card.Img variant="top" src={card.image} />
         <Card.Body>
           <Card.Title>{card.title}</Card.Title>
           <Card.Text>{card.text}</Card.Text>
