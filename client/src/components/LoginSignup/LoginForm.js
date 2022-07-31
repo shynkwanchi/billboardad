@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import LogStyle from "../components/LoginForm.module.css";
+import LogStyle from "./LoginForm.module.css";
 import axios from "axios";
 
 function LoginForm() {

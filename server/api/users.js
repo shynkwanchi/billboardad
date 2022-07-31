@@ -4,14 +4,17 @@ const bcrypt = require("bcrypt");
 
 router.post("/", async (req, res) => {
   try {
-    const { error } = validate(req.body);
-    if (error) {
-      return res.status(400).send({ message: error.details[0].message });
-    }
+    // const { error } = validate(req.body);
+    // if (error) {
+    //   return res.status(400).send({ message: error.details[0].message });
+    // }
 
-    if(req.body.retypepass != req.body.password) {
-      return res.status(400).send({ message: "Password does not match!" });
-    };
+    // if(req.body.retypepass != req.body.password) {
+    //   return res.status(400).send({ message: "Password does not match!" });
+    // };
+
+    if (req.body.email == "")
+    return res.status(400);
       
     const user = await User.findOne({ email: req.body.email });
     if (user)

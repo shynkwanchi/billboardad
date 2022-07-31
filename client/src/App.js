@@ -1,10 +1,10 @@
 import React from "react";
 import {Routes, Route } from "react-router-dom";
-import Home from "./routes/Home";
 import Navigation from "./components/Navigation";
-import LoginForm from "./routes/LoginForm";
-import SignupForm from "./routes/SignupForm";
+import LoginForm from "./components/LoginSignup/LoginForm";
+import SignupForm from "./components/LoginSignup/SignupForm";
 import Main from "./components/Main";
+import SignupTest from "./components/LoginSignup/SignupTest";
 
 function App() {
 
@@ -13,11 +13,11 @@ function App() {
   return (
     <div>
       <Navigation />
-      <Home />
       <Routes>
-        {user && <Route path="/" exact element= {<Main />}/>}
+        {user && <Route path="/" exact element={<Main />} />}
         <Route path="/login" element={<LoginForm />} />
         <Route path="/signup" element={<SignupForm />} />
+        <Route path="/test" element={<SignupTest />} />
       </Routes>
     </div>
   );
