@@ -19,13 +19,12 @@ Last updated: To be added.
 + Nguyen Quang Duy - s3877991.
 + Ninh Trong Hoang - s3695412.
 + Lu Minh Khang - s3863969.
-+ Dong Vu Minh Phuc - s3700622.
+
 ### 2) Contributions
 + Thien Di (--%): Full-stack developer.
 + Quang Duy (--%): UX/UI Designer, Full-stack developer.
 + Trong Hoang (--%): UX/UI Designer, Full-stack developer.
 + Minh Khang (--%): UX/UI Designer, Front-end developer.
-+ Minh Phuc (--%): UX/UI Designer, Front-end developer
 
 ## Project Details
 ### 1) Description
